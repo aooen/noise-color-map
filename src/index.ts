@@ -58,6 +58,7 @@ window.addEventListener('load', () => {
     changed.forEach(node => {
       initNode(node)
     })
+    changed = []
 
     const { x, y } = getXYFromDOMData(hovered)
     hovered.style.backgroundColor = getPerlinHSL(x, y, undefined, 85)
