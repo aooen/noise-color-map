@@ -60,14 +60,14 @@ window.addEventListener('load', () => {
     })
 
     const { x, y } = getXYFromDOMData(hovered)
-    hovered.style.backgroundColor = getPerlinHSL(x, y, undefined, 70)
+    hovered.style.backgroundColor = getPerlinHSL(x, y, undefined, 85)
     hovered.textContent = Hangul.disassemble(hovered.textContent)[0]
     changed.push(hovered)
 
     ;[[-1, 0], [1, 0], [0, -1], [0, 1]].forEach(([dx, dy]) => {
       const node = nodes[x + dx]?.[y + dy]
       if (!node) { return }
-      node.style.backgroundColor = getPerlinHSL(x, y, undefined, 60)
+      node.style.backgroundColor = getPerlinHSL(x, y, undefined, 70)
       node.textContent = Hangul.assemble(Hangul.disassemble(node.textContent).slice(0, 2))
       changed.push(node)
     })
