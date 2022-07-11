@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "hangul-js": "^0.2.6",
     "noisejs": "^2.1.0"
   },
   "devDependencies": {
